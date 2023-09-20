@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Kristina Lingthep](https://up.htmlacademy.ru/htmlcss/38/user/1920633).
-* Наставник: `Неизвестно`.
+* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
 
 ---
 
