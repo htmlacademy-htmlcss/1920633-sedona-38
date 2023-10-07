@@ -44,8 +44,11 @@ body {
   text-transform: capitalize;
 }
 
-.button {
+button {
   font-family: "PT Sans";
+}
+
+.button {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -164,6 +167,12 @@ body {
   color: #FFFFFF;
 }
 
+.subscription-field {
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .button-subscription {
   font-size: 20px;
   line-height: 36px;
@@ -237,6 +246,12 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.select-control {
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .hotel-card-link {
