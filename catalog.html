@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог гостиниц</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -116,7 +117,7 @@
       <section class="catalog">
         <h2 class="visually-hidden">Сортировка</h2>
         <div class="sort">
-          <p class="catalog-title">Найдено гостиниц: 38</p>
+          <p class="catalog-sort-title">Найдено гостиниц: 38</p>
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешёвое</option>
             <option value="expensive">Сначала дорогое</option>
@@ -160,7 +161,7 @@
             <div class="hotel-stars-four">
               <span class="visually-hidden">Четыре звезды</span>
             </div>
-            <span>Рейтинг: 8,5</span>
+            <span class="hotel-rating">Рейтинг: 8,5</span>
           </li>
           <li class="hotels-card">
             <a class="hotel-card-link" href="#">
@@ -178,7 +179,7 @@
             <div class="hotel-stars-four">
               <span class="visually-hidden">Четыре звезды</span>
             </div>
-            <span>Рейтинг: 9,2</span>
+            <span class="hotel-rating">Рейтинг: 9,2</span>
           </li>
           <li class="hotels-card">
             <a class="hotel-card-link" href="#">
@@ -196,7 +197,7 @@
             <div class="hotel-stars-three">
               <span class="visually-hidden">Три звезды</span>
             </div>
-            <span>Рейтинг: 6,9</span>
+            <span class="hotel-rating">Рейтинг: 6,9</span>
           </li>
           <li class="hotels-card">
             <a class="hotel-card-link" href="#">
@@ -214,7 +215,7 @@
             <div class="hotel-stars-two">
               <span class="visually-hidden">Две звезды</span>
             </div>
-            <span>Рейтинг: 5,0</span>
+            <span class="hotel-rating">Рейтинг: 5,0</span>
           </li>
         </ul>
 
@@ -242,11 +243,11 @@
 
       <section class="subscription-inner">
         <h2 class="inner-title">Подпишитесь на рассылку</h2>
-          <p class="inner-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-          <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscription-field" placeholder="Ваш e-mail" type="email" name="subscription-email" required>
-            <button class="button subscription-button" type="submit">Подписаться</button>
-          </form>
+        <p class="inner-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="subscription-field" placeholder="Ваш e-mail" type="email" name="subscription-email" required>
+          <button class="button subscription-button" type="submit">Подписаться</button>
+        </form>
       </section>
     </main>
 
@@ -272,9 +273,9 @@
         </ul>
       </section>
 
-      <div class="contacts">
+      <address class="contacts">
         <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
-      </div>
+      </address>
 
       <div class="about">
         <a class="about-link" href="https://htmlacademy.ru/">
