@@ -71,6 +71,7 @@ body {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   width: 430px;
 }
 
@@ -88,18 +89,25 @@ body {
 .user-wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   max-width: 312px;
   margin-left: auto;
 }
 
 .navigation-user {
   display: flex;
+  align-items: center;
 }
 
 .navigation-user-link {
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 22px 12px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  text-align: center;
   color: #000000;
   text-decoration: none;
   text-transform: capitalize;
@@ -143,7 +151,8 @@ a.button {
   background-color: #ffffff;
 }
 
-.section-text {
+.section-advantages-text {
+  padding: 69px 0;
   text-align: center;
 }
 
@@ -165,7 +174,7 @@ a.button {
 
 .advantages-item {
   width: 400px;
-  padding: 0 85px;
+  padding: 100px 85px;
 }
 
 .advantages-item-row {
@@ -206,6 +215,11 @@ a.button {
   background-color: #ffffff;
 }
 
+.section-services-text {
+  padding: 64px 0;
+  text-align: center;
+}
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -230,7 +244,7 @@ a.button {
 }
 
 .search {
-  padding: 0 304px;
+  padding: 96px 304px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -241,7 +255,7 @@ a.button {
 }
 
 .subscription {
-  padding: 0 258px;
+  padding: 96px 258px 104px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -273,15 +287,21 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 70px;
+  padding: 40px 70px 30px;
 }
 
 .footer-social-list {
-  display: flex;
-  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 142px;
 }
 
+
 .footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
@@ -472,8 +492,16 @@ a.button {
   text-transform: uppercase;
 }
 
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(6, 60px);
+  gap: 8px;
+}
+
 .pagination-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   font-size: 20px;
