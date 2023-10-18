@@ -116,6 +116,20 @@ body {
   text-transform: capitalize;
 }
 
+.favourites {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #7db54f;
+  border-radius: 50%;
+}
+
 .button {
   padding: 8px 10px;
   font-family: "PT Sans", sans-serif;
