@@ -261,6 +261,19 @@ a.button {
   background-color: #7db54f;
 }
 
+.button-green:hover {
+  background-color: #6c9e42;
+}
+
+.button-green:focus {
+  background-color: #6c9e42;
+}
+
+.button-green:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #7db54f;
+}
+
 .button-view {
   width: 48px;
   height: 48px;
