@@ -673,7 +673,6 @@ a.button {
 
 .hotel-card-link {
   grid-column: 1 / 3;
-  width: 300px;
   text-decoration: none;
 }
 
