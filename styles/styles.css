@@ -664,7 +664,7 @@ a.button {
 .hotels-card {
   display: grid;
   grid-template-columns: 140px 140px;
-  grid-template-rows: 212px auto auto 36px 36px;
+  grid-template-rows: auto auto auto 36px 36px;
   padding: 20px;
   gap: 16px 20px;
   border-radius: 4px;
