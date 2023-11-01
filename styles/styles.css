@@ -61,6 +61,7 @@ body {
 .main-navigation {
   display: flex;
   align-items: center;
+  position: relative;
   padding: 0 70px;
 }
 
@@ -68,6 +69,7 @@ body {
   position: absolute;
   width: 140px;
   top: 0;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -78,6 +80,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: inline-block;
   padding: 20px 0;
   margin: 0 16px;
@@ -87,6 +90,29 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+.navigation-link:hover {
+  color: #68a2ca;
+}
+
+.navigation-link:focus {
+  color: #68a2ca;
+}
+
+.navigation-link:active {
+  color: #82b3d3;
+}
+
+.navigation-link-current::before {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #756157;
+  content: "";
+  z-index: 1;
 }
 
 .user-wrapper {
@@ -206,6 +232,7 @@ a.button {
 }
 
 .button-search {
+  margin-top: 54px;
   width: 376px;
   font-size: 20px;
   line-height: 36px;
@@ -257,7 +284,6 @@ a.button {
 }
 
 .button-green {
-  padding: 8px 18px;
   background-color: #7db54f;
 }
 
@@ -317,12 +343,24 @@ a.button {
 }
 
 .hero {
+  position: relative;
   padding: 51px 371px 82px;
   text-align: center;
   background-color: #25435b;
   background-image: url("../images/welcome-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.hero::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 57px;
+  background-image: url("../images/svg/divider.svg");
+  background-repeat: no-repeat;
+  content: "";
 }
 
 .hero-logo {
@@ -339,12 +377,19 @@ a.button {
 }
 
 .section-title {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
 }
 
+.section-title-margin {
+  margin-bottom: 25px;
+}
+
 .section-description {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -356,6 +401,9 @@ a.button {
 }
 
 .advantages-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 400px;
   min-height: 385px;
   padding: 100px 85px;
@@ -381,12 +429,47 @@ a.button {
 }
 
 .advantages-title {
+  margin: 0;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
+.line-decoration {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.line-decoration::before {
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  content: "";
+}
+
+.line-decoration-white {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.line-decoration-white::before {
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  content: "";
+}
+
 .advantages-description {
+  margin: 0;
   color: #333333;
 }
 
@@ -415,13 +498,35 @@ a.button {
   padding: 80px 85px;
 }
 
+.services-house {
+  background-image: url("../images/svg/house.svg");
+  background-repeat: no-repeat;
+  background-position: center 81px;
+}
+
+.services-food {
+  background-image: url("../images/svg/food.svg");
+  background-repeat: no-repeat;
+  background-position: center 81px;
+}
+
+.services-souvenir {
+  background-image: url("../images/svg/souvenir.svg");
+  background-repeat: no-repeat;
+  background-position: center 81px;
+}
+
 .services-title {
+  margin: 0;
+  margin-top: 102px;
+  margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
 .services-description {
+  margin: 0;
   color: #333333;
 }
 
@@ -447,6 +552,7 @@ a.button {
 }
 
 .subscription-form {
+  margin-top: 54px;
   display: flex;
   justify-content: center;
 }
@@ -463,6 +569,7 @@ a.button {
 }
 
 .page-footer {
+  padding: 40px 70px 30px;
   background-color: #ffffff;
 }
 
@@ -470,19 +577,14 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 70px 30px;
+  min-height: 50px;
 }
 
 .footer-social-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   width: 142px;
 }
-
-.footer-social-item {
-  outline: #82b3d3 solid 1px;
-}
-
 
 .footer-social-link {
   display: flex;
@@ -493,6 +595,22 @@ a.button {
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-social-link .social-icon {
+  fill: #83b3d3;
+}
+
+.footer-social-link:hover .social-icon {
+  fill: #68a2ca;
+}
+
+.footer-social-link:focus .social-icon {
+  fill: #68a2ca;
+}
+
+.footer-social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .contacts {
@@ -523,8 +641,21 @@ a.button {
   width: 150px;
 }
 
-.about-logo {
-  vertical-align: bottom;
+.about-link .about-logo {
+  fill: #000000;
+}
+
+.about-link:hover .about-logo {
+  fill: #756157;
+}
+
+.about-link:focus .about-logo {
+  fill: #756157;
+  outline: none;
+}
+
+.about-link:active .about-logo {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 .catalog-filter {
@@ -549,7 +680,23 @@ a.button {
 
 .breadcrumbs {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 28px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item:first-child::after {
+  position: absolute;
+  content: url("../images/svg/arrow-vertical.svg");
+  right: -18px;
 }
 
 .breadcrumbs-link {
@@ -570,6 +717,33 @@ a.button {
 .breadcrumbs-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
+
+.breadcrumbs-link .breadcrumbs-home {
+  fill: #ffffff;
+}
+
+.breadcrumbs-link:hover .breadcrumbs-home {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus .breadcrumbs-home {
+  fill: #ffffff;
+}
+
+.breadcrumbs-link:active .breadcrumbs-home {
+  fill: rgba(255, 255, 255, 0.3);
+}
+
+/*
+.breadcrumbs-home {
+  display: block;
+  background-image: url("../images/svg/home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 12px;
+}
+*/
 
 .catalog-form {
   display: flex;
@@ -628,6 +802,7 @@ a.button {
 }
 
 .catalog-sort-title {
+  margin: 0;
   margin-right: auto;
   font-size: 30px;
   line-height: 36px;
@@ -671,13 +846,15 @@ a.button {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
+  padding-bottom: 40px;
   margin-bottom: 40px;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .hotels-card {
   display: grid;
-  grid-template-columns: 140px 140px;
-  grid-template-rows: auto auto auto 36px 36px;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: 212px 1fr;
   padding: 20px;
   gap: 16px 20px;
   border-radius: 4px;
