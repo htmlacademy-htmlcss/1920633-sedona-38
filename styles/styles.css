@@ -266,7 +266,7 @@ a.button {
   background-color: transparent;
 }
 
-.button-reset:disabled {
+.button-reset-disabled {
   color: rgba(255, 255, 255, 0.1);
   background-color: transparent;
 }
@@ -825,6 +825,7 @@ a.button {
   border-radius: 50%;
 }
 
+/*
 .control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
   top: 5px;
@@ -833,6 +834,16 @@ a.button {
   height: 10px;
   background-color: #3f5e72;
   border-radius: 50%;
+  content: "";
+}
+*/
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/svg/tick-circle.svg");
+  background-repeat: no-repeat;
   content: "";
 }
 
