@@ -1324,7 +1324,7 @@ a.button {
 .modal-input-date {
   position: relative;
   width: 440px;
-  padding: 12px 20px;
+  padding: 13px 20px 11px;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -1368,25 +1368,28 @@ a.button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .button-number {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   min-height: 48px;
   padding: 14px 10px;
-  background-color: #f2f2f2;
+  /*background-color: #f2f2f2;*/
+  background-color: transparent;
   border: none;
 }
 
 .less {
-  border-radius: 4px 0 0 4px;
+  right: 70px;
 }
 
 .more {
-  border-radius: 0 4px 4px 0;
+  right: 0;
 }
 
 .button-number svg {
@@ -1406,14 +1409,15 @@ a.button {
 }
 
 .modal-input-number {
-  width: 31px;
-  padding: 14px 5px;
+  width: 110px;
+  padding: 15px 45px 13px;
   text-align: center;
   font-family: inherit;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
   background-color: #f2f2f2;
+  border-radius: 4px;
   border: none;
 }
 
@@ -1423,26 +1427,40 @@ a.button {
   margin: 0;
 }
 
+.modal-input-number:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-input-number:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
 .tooltip {
   position: relative;
+  margin-right: 48px;
+}
+
+.tooltip-toggle {
   width: 26px;
   height: 26px;
-  margin-right: 46px;
   background-color: #83b3d3;
   background-image: url("../images/svg/info.svg");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
+  border: none;
 }
 
-.tooltip:hover .tooltip-content {
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
 
-.tooltip-content {
+.tooltip-text {
   display: none;
   position: absolute;
-  top: 41px;
+  top: 43px;
   left: -115px;
   width: 256px;
   padding: 20px 18px 23px 22px;
@@ -1454,7 +1472,7 @@ a.button {
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
-.tooltip-content::before {
+.tooltip-text::before {
   position: absolute;
   width: 19px;
   height: 9px;
