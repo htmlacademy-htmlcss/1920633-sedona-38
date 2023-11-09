@@ -118,9 +118,8 @@ body {
 .user-wrapper {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-
   margin-left: auto;
+  max-width: 500px;
 }
 
 .navigation-user {
@@ -233,7 +232,7 @@ a.button {
 
 .button-user {
   width: 160px;
-  margin-left: 20px;
+  margin: 14px 0 14px 20px;
 }
 
 .button-search {
@@ -392,7 +391,7 @@ a.button {
 }
 
 .section-advantages-text {
-  padding: 69px 274px 90px;
+  padding: 69px 260px 90px;
   text-align: center;
 }
 
@@ -507,7 +506,7 @@ a.button {
 }
 
 .section-services-text {
-  padding: 64px 347px;
+  padding: 64px 341px;
   text-align: center;
 }
 
@@ -532,19 +531,19 @@ a.button {
 .services-food {
   background-image: url("../images/svg/food.svg");
   background-repeat: no-repeat;
-  background-position: center 81px;
+  background-position: center 82px;
 }
 
 .services-souvenir {
   background-image: url("../images/svg/souvenir.svg");
   background-repeat: no-repeat;
-  background-position: center 81px;
+  background-position: center 79px;
 }
 
 .services-title {
   margin: 0;
-  margin-top: 103px;
-  margin-bottom: 30px;
+  margin-top: 104px;
+  margin-bottom: 29px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -556,7 +555,7 @@ a.button {
 }
 
 .search {
-  padding: 96px 304px;
+  padding: 96px 295px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -577,7 +576,7 @@ a.button {
 }
 
 .subscription-form {
-  margin-top: 54px;
+  margin-top: 55px;
   display: flex;
   justify-content: center;
 }
@@ -626,10 +625,7 @@ a.button {
   fill: #83b3d3;
 }
 
-.footer-social-link:hover .social-icon {
-  fill: #68a2ca;
-}
-
+.footer-social-link:hover .social-icon,
 .footer-social-link:focus .social-icon {
   fill: #68a2ca;
 }
@@ -639,7 +635,7 @@ a.button {
 }
 
 .contacts {
-  width: 331px;
+  max-width: 350px;
 }
 
 .phone-number {
@@ -670,13 +666,9 @@ a.button {
   fill: #000000;
 }
 
-.about-link:hover .about-logo {
-  fill: #756157;
-}
-
+.about-link:hover .about-logo,
 .about-link:focus .about-logo {
   fill: #756157;
-  outline: none;
 }
 
 .about-link:active .about-logo {
@@ -721,6 +713,7 @@ a.button {
 .breadcrumbs-item:not(:last-child)::after {
   position: absolute;
   content: url("../images/svg/arrow-vertical.svg");
+  top: 0;
   right: -18px;
 }
 
@@ -828,7 +821,7 @@ a.button {
   opacity: 0.6;
 }
 
-.control:focus .control-mark {
+.control-input:focus + .control-mark {
   outline: 3px solid #83b3d3;
 }
 
@@ -917,9 +910,16 @@ a.button {
 
 .range-text {
   position: absolute;
-  top: 13px;
-  right: 21px;
+  top: 14px;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.range-text-left {
+  right: 22px;
+}
+
+.range-text-right {
+  right: 20px;
 }
 
 .range-scale {
@@ -986,7 +986,7 @@ a.button {
 .sort {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .catalog-sort-title {
@@ -1001,13 +1001,18 @@ a.button {
 .select-control {
   width: 292px;
   height: 49px;
-  padding: 11px 20px;
+  padding: 0 18px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  background-color: #ffffff;
   border-radius: 4px;
   border: 2px solid #e5e5e5;
+  background-image: url("../images/svg/arrow-horizontal.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 18px) center;
+  appearance: none;
 }
 
 .select-control:hover {
@@ -1032,9 +1037,9 @@ a.button {
 
 .hotels-list {
   display: grid;
-  grid-template-columns: repeat(3, 340px);
-  gap: 20px;
-  padding-bottom: 40px;
+  grid-template-columns: repeat(3, 341px);
+  gap: 19px;
+  padding-bottom: 38px;
   margin-bottom: 39px;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1043,7 +1048,7 @@ a.button {
   display: grid;
   grid-template-columns: repeat(2, 140px);
   grid-template-rows: 212px 1fr;
-  padding: 19px;
+  padding: 20px 19px;
   gap: 16px 20px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
@@ -1384,28 +1389,37 @@ a.button {
   border: none;
 }
 
-.less {
+.less-adult {
   right: 70px;
 }
 
-.more {
+.more-adult {
   right: 0;
+}
+
+.less-child {
+  right: 72px;
+}
+
+.more-child {
+  right: 1px;
 }
 
 .button-number svg {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-.button-number:hover svg {
-  fill: #000000;
-}
-
+.button-number:hover svg,
 .button-number:focus svg {
   fill: #000000;
 }
 
 .button-number:active svg {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+.button-number:focus {
+  outline: 3px solid #83b3d3;
 }
 
 .modal-input-number {
@@ -1427,6 +1441,10 @@ a.button {
   margin: 0;
 }
 
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .modal-input-number:hover {
   background-color: #e6e6e6;
 }
@@ -1436,12 +1454,18 @@ a.button {
   outline: 3px solid #83b3d3;
 }
 
+.modal-input-number-child {
+  width: 112px;
+}
+
 .tooltip {
   position: relative;
-  margin-right: 48px;
+  margin-right: 72px;
 }
 
 .tooltip-toggle {
+  position: absolute;
+  top: -13px;
   width: 26px;
   height: 26px;
   background-color: #83b3d3;
@@ -1460,7 +1484,7 @@ a.button {
 .tooltip-text {
   display: none;
   position: absolute;
-  top: 43px;
+  top: 28px;
   left: -115px;
   width: 256px;
   padding: 20px 18px 23px 22px;

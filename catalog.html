@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Каталог гостиниц</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
   <body>
     <div class="page-container">
@@ -129,13 +131,13 @@
                     <div class="range-wrapper-inputs">
                       <label class="range-label">
                         <input class="range-input range-left" type="number" value="0" name="min-price">
-                        <span class="range-text">от</span>
+                        <span class="range-text range-text-left">от</span>
                       </label>
                     </div>
                     <div class="range-wrapper-inputs">
                       <label class="range-label">
                         <input class="range-input range-right" type="number" value="9000" name="max-price">
-                        <span class="range-text">до</span>
+                        <span class="range-text range-text-right">до</span>
                       </label>
                     </div>
                   </div>
@@ -181,10 +183,10 @@
             <div class="sort">
               <p class="catalog-sort-title">Найдено гостиниц: 38</p>
               <select class="select-control" aria-label="Сортировка">
-                <option value="cheap">Сначала дешёвое</option>
-                <option value="expensive">Сначала дорогое</option>
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
                 <option value="best">Сначала с высоким рейтингом</option>
-                <option value="popular">Сначала популярное</option>
+                <option value="popular">Сначала популярные</option>
               </select>
 
               <ul class="cards-view-list reset-list">
