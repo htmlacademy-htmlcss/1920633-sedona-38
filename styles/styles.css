@@ -1059,10 +1059,16 @@ a.button {
   text-decoration: none;
 }
 
-.hotel-card-link h3:hover {
-  color: #68a2ca;
+.hotel-card-link img:hover,
+.hotel-card-link img:focus {
+  opacity: 0.7;
 }
 
+.hotel-card-link img:active {
+  opacity: 0.5;
+}
+
+.hotel-card-link h3:hover,
 .hotel-card-link h3:focus {
   color: #68a2ca;
 }
