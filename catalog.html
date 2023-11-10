@@ -142,20 +142,6 @@
                     </div>
                   </div>
 
-                  <!--
-                    <div class="range-wrapper-inputs">
-                    <label class="range-label range-left">
-                      <input class="range-input" type="number" value="0" name="min-price">
-                      <span class="range-text">от</span>
-                    </label>
-                    <label class="range-label range-right">
-                      <input class="range-input" type="number" value="9000" name="max-price">
-                      <span class="range-text">до</span>
-                    </label>
-                  </div>
-
-                  -->
-
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 226px;">
                       <button class="range-toggle toggle-min" type="button">
@@ -275,31 +261,6 @@
               </li>
             </ul>
 
-            <!-- flex вариант
-              <li class="hotels-card">
-                <a class="hotel-card-link" href="#">
-                  <img class="hotel-card-image" src="images/hotel-amara.jpg" width="300" height="212" alt="Вид на звёздное небо между горами">
-                </a>
-                <a class="hotel-card-link" href="#">
-                  <h3 class="hotel-card-title">Amara Resort & Spa</h3>
-                </a>
-                <div class="hotel-card-info">
-                  <span>Гостиница</span>
-                  <span>От 4000 ₽</span>
-                </div>
-                <div class="hotel-buttons">
-                  <a class="button button-brown button-more" href="#">Подробнее</a>
-                  <button class="button button-favourite" type="button">В избранное</button>
-                </div>
-                <div class="hotel-rating">
-                  <div class="hotel-stars stars-four">
-                    <span class="visually-hidden">Четыре звезды</span>
-                  </div>
-                  <span class="rating">Рейтинг: 8,5</span>
-                </div>
-              </li>
-            -->
-
             <ul class="pagination reset-list">
               <li class="pagination-item">
                 <a class="pagination-link pagination-current" href="#">1</a>
@@ -327,7 +288,8 @@
           <h2 class="section-title">Подпишитесь на рассылку</h2>
           <p class="section-description">Только полезная информация и никакого спама, честное&nbsp;бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="subscription-field" placeholder="Ваш e-mail" type="email" name="subscription-email" required>
+            <label class="visually-hidden" for="email-field">Поле для ввода e-mail</label>
+            <input class="subscription-field" id="email-field" placeholder="Ваш e-mail" type="email" name="subscription-email" required>
             <button class="button button-subscription" type="submit">Подписаться</button>
           </form>
         </section>
