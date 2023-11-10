@@ -352,16 +352,6 @@ a.button {
 .button-current {
   border-color: #000000;
 }
-/*
-.button-modal {
-  width: 577px;
-  margin-top: 48px;
-  padding: 18px 77px;
-  font-size: 20px;
-  line-height: 24px;
-  border-radius: 10px;
-}
-*/
 
 .button-modal {
   grid-column: 1 / -1;
