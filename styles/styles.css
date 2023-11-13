@@ -422,18 +422,19 @@ a.button {
 }
 
 .advantages-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 400px;
   min-height: 385px;
-  padding: 100px 85px;
+  padding: 113px 85px;
   text-align: center;
 }
 
 .advantages-item-row {
   display: flex;
   width: 1200px;
+}
+
+.advantages-item-row .advantages-item {
+  padding: 103px 85px 102px;
 }
 
 .item-dark-blue {
@@ -459,7 +460,7 @@ a.button {
 
 .line-decoration {
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
 }
 
 .line-decoration::before {
@@ -475,7 +476,7 @@ a.button {
 
 .line-decoration-white {
   position: relative;
-  padding-bottom: 32px;
+  padding-bottom: 31px;
 }
 
 .line-decoration-white::before {
@@ -1084,6 +1085,10 @@ a.button {
   color: #000000;
 }
 
+.hotel-text {
+  color: #333333;
+}
+
 .hotel-price {
   justify-self: end;
 }
@@ -1126,7 +1131,6 @@ a.button {
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
   gap: 8px;
 }
 
